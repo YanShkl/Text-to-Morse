@@ -1,15 +1,16 @@
 import sys
-from files import welcome, MORSE_CODE_DICT
+from files import welcome, MORSE_CODE_DICT  # importing data with welcoming logo and morse dictionary
 
-print(f'\n{welcome}') # Showing welcome ASCII
+print(f'\n{welcome}')  # Showing welcome ASCII
 
-is_working=True
+is_working = True
 
 while is_working:
 
     text = input('\nInput text You want to translate to morse code or "EXIT" to exit: ').upper()
 
     enc_word = []
+
 
     def text_to_morse():
 
@@ -30,6 +31,8 @@ while is_working:
                     print(f'You have entered not allowed symbol/letter: {sys.exc_info()[1]}. \n'
                           f'Please enter only English letters next time, without special symbols.')
                     break
+
+
     text_to_morse()
 
     print(f" Your morse code is: {' '.join(enc_word)}")
